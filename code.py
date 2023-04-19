@@ -1,26 +1,15 @@
-# Program to check if a number is prime or not
-
-num = 29
-
-# To take input from the user
-#num = int(input("Enter a number: "))
-
-# define a flag variable
-flag = False
-
-if num == 1:
-    print(num, "is not a prime number")
-elif num > 1:
-    # check for factors
-    for i in range(2, num):
-        if (num % i) == 0:
-            # if factor is found, set flag to True
-            flag = True
-            # break out of loop
-            break
-
-    # check if flag is True
-    if flag:
-        print(num, "is not a prime number")
-    else:
-        print(num, "is a prime number")
+year = int(input("year ") )
+m = int(input("month range (1-12): ") )
+ if m > 12:
+     print("retry")
+ else:
+     if m == 2:
+         if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+             d = 29
+         else:
+             d = 28
+     elif m in [4, 6, 9, 11]:
+         d = 30
+     else:
+         d = 31
+     print("No. of days :", d)
